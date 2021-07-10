@@ -4,51 +4,52 @@ computerScore = 0;
 
 //Computer Random 
 
-let computerPlay = ['rock'];
+let computerPlay = ['paper', 'rock', 'scissors'];
 
 let computerGame = computerPlay[Math.floor(Math.random() * computerPlay.length)];
 
 //Player Random when ready change to player choice and remove random 
 
-let playerPlay = ['paper'];
+let playerGame = 'rock';
 
-let playerGame = playerPlay[Math.floor(Math.random() * playerPlay.length)];
+//let playerGame = playerPlay[Math.floor(Math.random() * playerPlay.length)];
 
 
 //Rounds 
 
-function win(playerGame, computerGame) {
-  if (computerGame === 'rock' && playerGame === 'paper');
-  else if (computerGame === 'paper' && playerGame === 'scissors');
-  else if (computerGame === 'scissors' && playerGame === 'rock')
-    playerScore++;
-  return console.log('You Win!')
+function getWinner(playerGame, computerGame) {
+  if (playerGame === 'paper' && computerGame === 'rock') 
+  return 'You Win';{
+    if (playerGame === 'scissors' && computerGame === 'paper')
+    return 'You Win!'; {
+      if (playerGame === 'rock' && computerGame === 'scissors')
+      return 'You Win!'; {
+        if (playerGame === 'rock' && computerGame === 'paper')
+        return 'You Lose!'; {
+          if (playerGame === 'paper' && computerGame === 'scissors')
+          return 'You Lose!'; {
+            if (playerGame === 'scissors' && computerGame === 'rock')
+            return 'You Lose!'; {
+              if (playerGame === 'rock' && computerGame === 'rock')
+              return 'Tie!'; {
+                if (playerGame === 'scissors' && computerGame === 'scissors')
+                return 'You Win!'; {
+                  if (playerGame === 'paper' && computerGame === 'paper')
+                  return 'You Win!'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-function lose(playerGame, computerGame) {
-  if (computerGame === 'paper' && playerGame === 'rock');
-  else if (computerGame === 'scissors' && playerGame === 'paper');
-  else if (computerGame === 'rock' && playerGame === 'scissors');
-  computerScore++;
-  // return console.log('You Lose!')
-}
 
-function tie(playerGame, computerGame) {
-  if (computerGame === 'rock' && playerGame === 'rock');
-  else if (computerGame === 'paper' && playerGame === 'paper');
-  else if (computerGame === 'scissors' && playerGame === 'scissors');
-  // return console.log('Tie')
-}
+getWinner(playerGame, computerGame);
 
-function Win(playerScore, computerScore) {
-  if (playerScore === 1)
-    console.log("You Win")
-}
-
-win(playerGame, computerGame);
-lose(playerGame, computerGame);
-tie(playerGame, computerGame);
-
+console.log(getWinner(playerGame, computerGame))
 
 
 //console logs
