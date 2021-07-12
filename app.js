@@ -17,39 +17,64 @@ let playerGame = 'rock';
 
 //Rounds 
 
+// function getWinner(playerGame, computerGame) {
+//   if (playerGame === 'paper' && computerGame === 'rock') 
+//   playerScore+= 1; 
+//   return 'You Win'; 
+//   {if else (playerGame === 'scissors' && computerGame === 'paper')
+//   playerScore+= 1 ; return 'You Win!';}
+//   {else if (playerGame === 'rock' && computerGame === 'scissors')
+//   playerScore+= 1 ; return 'You Win!'; }
+//   {else if (playerGame === 'rock' && computerGame === 'paper')
+//   computerScore+= 1; return 'You Lose!'; }
+//   {else if (playerGame === 'paper' && computerGame === 'scissors')
+//   computerScore+= 1; return 'You Lose!'; }
+//   {else if (playerGame === 'scissors' && computerGame === 'rock')
+//   computerScore+= 1; return 'You Lose!'; }
+//   {else if (playerGame === 'rock' && computerGame === 'rock')
+//   return 'Tie!'; }
+//  { else if (playerGame === 'scissors' && computerGame === 'scissors')
+//   return 'Tie!'; }
+//   {else if (playerGame === 'paper' && computerGame === 'paper')
+//   return 'Tie!'}
+// }
+
 function getWinner(playerGame, computerGame) {
-  if (playerGame === 'paper' && computerGame === 'rock') 
-  return 'You Win';{
-    if (playerGame === 'scissors' && computerGame === 'paper')
-    return 'You Win!'; {
-      if (playerGame === 'rock' && computerGame === 'scissors')
-      return 'You Win!'; {
-        if (playerGame === 'rock' && computerGame === 'paper')
-        return 'You Lose!'; {
-          if (playerGame === 'paper' && computerGame === 'scissors')
-          return 'You Lose!'; {
-            if (playerGame === 'scissors' && computerGame === 'rock')
-            return 'You Lose!'; {
-              if (playerGame === 'rock' && computerGame === 'rock')
-              return 'Tie!'; {
-                if (playerGame === 'scissors' && computerGame === 'scissors')
-                return 'You Win!'; {
-                  if (playerGame === 'paper' && computerGame === 'paper')
-                  return 'You Win!'
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  if(playerGame === 'paper' && computerGame === 'rock') {
+    playerScore+= 1; 
+    return "You win";
+  } else if(playerGame === 'scissors' && computerGame === 'paper') {
+    playerScore+= 1;
+    return "You win";
+  } else if(playerGame === 'rock' && computerGame === 'scissors') {
+    playerScore+= 1;
+    return "You win";
+  } else if(playerGame === 'rock' && computerGame === 'paper') {
+    computerScore+= 1;
+    return "You Lose";
+  } else if(playerGame === 'paper' && computerGame === 'scissors') {
+    computerScore+= 1;
+    return "You Lose";
+  } else if(playerGame === 'scissors' && computerGame === 'rock') {
+    computerScore+= 1;
+    return "You Lose";
+  } else if (playerGame === 'rock' && computerGame === 'rock') {
+    return 'Tie!';
+  } else if(playerGame === 'scissors' && computerGame === 'scissors') {
+    return 'Tie!';
+  } else if(playerGame === 'paper' && computerGame === 'paper') {
+    return 'Tie!';
   }
+}
+ 
+let counter = 1;
+while(counter <= 5) {
+  console.log(getWinner(playerGame, computerGame))
+  counter++;
 }
 
 
-getWinner(playerGame, computerGame);
 
-console.log(getWinner(playerGame, computerGame))
 
 
 //console logs
