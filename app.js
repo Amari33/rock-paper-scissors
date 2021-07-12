@@ -8,36 +8,10 @@ let computerPlay = ['paper', 'rock', 'scissors'];
 
 let computerGame = computerPlay[Math.floor(Math.random() * computerPlay.length)];
 
-//Player Random when ready change to player choice and remove random 
-
-let playerGame = 'rock';
-
-//let playerGame = playerPlay[Math.floor(Math.random() * playerPlay.length)];
-
+//Player enter your value here
+let playerGame = ' ';
 
 //Rounds 
-
-// function getWinner(playerGame, computerGame) {
-//   if (playerGame === 'paper' && computerGame === 'rock') 
-//   playerScore+= 1; 
-//   return 'You Win'; 
-//   {if else (playerGame === 'scissors' && computerGame === 'paper')
-//   playerScore+= 1 ; return 'You Win!';}
-//   {else if (playerGame === 'rock' && computerGame === 'scissors')
-//   playerScore+= 1 ; return 'You Win!'; }
-//   {else if (playerGame === 'rock' && computerGame === 'paper')
-//   computerScore+= 1; return 'You Lose!'; }
-//   {else if (playerGame === 'paper' && computerGame === 'scissors')
-//   computerScore+= 1; return 'You Lose!'; }
-//   {else if (playerGame === 'scissors' && computerGame === 'rock')
-//   computerScore+= 1; return 'You Lose!'; }
-//   {else if (playerGame === 'rock' && computerGame === 'rock')
-//   return 'Tie!'; }
-//  { else if (playerGame === 'scissors' && computerGame === 'scissors')
-//   return 'Tie!'; }
-//   {else if (playerGame === 'paper' && computerGame === 'paper')
-//   return 'Tie!'}
-// }
 
 function getWinner(playerGame, computerGame) {
   if(playerGame === 'paper' && computerGame === 'rock') {
@@ -66,21 +40,19 @@ function getWinner(playerGame, computerGame) {
     return 'Tie!';
   }
 }
- 
+
+ //counter
+
 let counter = 1;
 while(counter <= 5) {
   console.log(getWinner(playerGame, computerGame))
   counter++;
 }
 
-
-
-
-
 //console logs
 console.log(playerScore)
 console.log(computerScore)
 console.log(computerGame)
 console.log(playerGame)
-//
+
 
