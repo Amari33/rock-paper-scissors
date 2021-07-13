@@ -8,8 +8,10 @@ let computerPlay = ['paper', 'rock', 'scissors'];
 
 let computerGame = computerPlay[Math.floor(Math.random() * computerPlay.length)];
 
-//Player enter your value here
-let playerGame = ' ';
+//Player 
+//let playerGame = ' ';
+let playerGame = prompt('rock, paper or scissors')
+
 
 //Rounds 
 
@@ -48,6 +50,8 @@ while(counter <= 5) {
   console.log(getWinner(playerGame, computerGame))
   counter++;
 }
+
+
 
 //console logs
 console.log(playerScore)
