@@ -46,7 +46,7 @@ function getWinner(playerGame, computerGame) {
  //counter
 
 let counter = 1;
-while(counter <= 5) {
+while(counter <= 3) {
   console.log(getWinner(playerGame, computerGame))
   counter++;
 }
